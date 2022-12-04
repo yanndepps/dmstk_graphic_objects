@@ -11,6 +11,14 @@
 # Additional Resources
 
 
+## U2
+
+-   [Color Arrangement in Generative Art](https://tylerxhobbs.com/essays/2021/color-arrangement-in-generative-art)
+-   [Computational Color](http://printingcode.runemadsen.com/lecture-color/)
+-   [Random & Noise](http://www.generative-gestaltung.de/2/)
+-   [Design as Art](https://stream.studieau.co/post/57582069103/design-is-fine-bruno-munari-faces-from-his)
+
+
 ## U3
 
 -   [Four randomly distributed elements](https://www.centrepompidou.fr/fr/ressources/oeuvre/cez6op)
