@@ -4,6 +4,7 @@
  */
 
 const canvasSketch = require('canvas-sketch');
+const Tweakpane = require('tweakpane');
 const p5 = require('p5');
 new p5();
 
@@ -20,17 +21,24 @@ const settings = {
  * @param xTxt         // x pos of our text
  * @param yTxt         // y pos or our text
  * @param fs           // font size
- * @param txt          // text to display
+ * @param message      // text to display
  * @param cs           // circle size, diameter of a point
+ * @param factor       // sample factor
  */
+
+const params = {
+  factor: 0.1,
+  cs: 4,
+  sw: 0.5,
+  lw: 1,
+  message: 'YES&NO',
+  fs: 130,
+}
 
 let font;
 let points;
 let xTxt;
 let yTxt;
-const fs = 130;
-const txt = "YES&NO";
-const cs = 4;
 
 window.preload = () => {
   font = loadFont('../../assets/font/bauhaus.otf');
@@ -41,22 +49,22 @@ const sketch = ({ width, height }) => {
   yTxt = height / 2;
   return () => {
     // computePoints(map(mouseX, 0, width, 0.005, 0.1));
-    computePoints(0.01);
+    computePoints(params.factor);
     background(33);
     //---
     noFill();
     stroke(255);
-    strokeWeight(1);
+    strokeWeight(params.lw);
     beginShape();
     for (let i = 0; i < points.length; i++) {
       vertex(points[i].x, points[i].y);
     }
     endShape();
     //---
-    strokeWeight(0.5);
     fill(33);
+    strokeWeight(params.sw);
     for (let i = 0; i < points.length; i++) {
-      circle(points[i].x, points[i].y, cs);
+      circle(points[i].x, points[i].y, params.cs);
     }
   };
 };
@@ -65,15 +73,29 @@ const sketch = ({ width, height }) => {
  */
 
 function computePoints(factor) {
-  points = font.textToPoints(txt, xTxt, yTxt, fs, {
+  points = font.textToPoints(params.message, xTxt, yTxt, params.fs, {
     sampleFactor: factor
   });
-  let bounds = font.textBounds(txt, xTxt, yTxt, fs);
+  let bounds = font.textBounds(params.message, xTxt, yTxt, params.fs);
   for (let i = 0; i < points.length; i++) {
     let p = points[i];
     p.x = p.x - (bounds.x - xTxt + bounds.w / 2);
     p.y = p.y + bounds.h / 2;
   }
 }
+
+const createPane = () => {
+  const pane = new Tweakpane.Pane();
+  let folder;
+  folder = pane.addFolder({ title: 'parameters' });
+  folder.addInput(params, 'factor', { min: 0.01, max: 0.2, step: 0.01 });
+  folder.addInput(params, 'cs', { min: 1, max: 8, step: 1 });
+  folder.addInput(params, 'sw', { min: 0.5, max: 4, step: 0.1 });
+  folder.addInput(params, 'lw', { min: 0.5, max: 4, step: 0.1 });
+  folder = pane.addFolder({ title: 'text' });
+  folder.addInput(params, 'message');
+  folder.addInput(params, 'fs', { min: 80, max: 130, step: 10 });
+};
+createPane();
 
 canvasSketch(sketch, settings);
