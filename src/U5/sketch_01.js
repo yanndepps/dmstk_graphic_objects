@@ -14,14 +14,66 @@ const settings = {
   context: '2d'
 };
 
-window.preload = () => {
-  //---
-}
+/*
+ * @param font         // load & store our font
+ * @param points       // outline our txt with points
+ * @param xTxt         // x pos of our text
+ * @param yTxt         // y pos or our text
+ * @param fs           // font size
+ * @param txt          // text to display
+ * @param cs           // circle size, diameter of a point
+ */
 
-const sketch = () => {
-  return ({ width, height }) => {
+let font;
+let points;
+let xTxt;
+let yTxt;
+const fs = 130;
+const txt = "YES&NO";
+const cs = 4;
+
+window.preload = () => {
+  font = loadFont('../../assets/font/bauhaus.otf');
+};
+
+const sketch = ({ width, height }) => {
+  xTxt = width / 2;
+  yTxt = height / 2;
+  return () => {
+    // computePoints(map(mouseX, 0, width, 0.005, 0.1));
+    computePoints(0.01);
     background(33);
+    //---
+    noFill();
+    stroke(255);
+    strokeWeight(1);
+    beginShape();
+    for (let i = 0; i < points.length; i++) {
+      vertex(points[i].x, points[i].y);
+    }
+    endShape();
+    //---
+    strokeWeight(0.5);
+    fill(33);
+    for (let i = 0; i < points.length; i++) {
+      circle(points[i].x, points[i].y, cs);
+    }
   };
 };
+
+/*
+ */
+
+function computePoints(factor) {
+  points = font.textToPoints(txt, xTxt, yTxt, fs, {
+    sampleFactor: factor
+  });
+  let bounds = font.textBounds(txt, xTxt, yTxt, fs);
+  for (let i = 0; i < points.length; i++) {
+    let p = points[i];
+    p.x = p.x - (bounds.x - xTxt + bounds.w / 2);
+    p.y = p.y + bounds.h / 2;
+  }
+}
 
 canvasSketch(sketch, settings);
