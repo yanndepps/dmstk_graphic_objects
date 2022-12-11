@@ -55,7 +55,7 @@
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">examples screenshots</th>
+<th scope="col" class="org-left">Example Screenshots</th>
 <th scope="col" class="org-left">( small selection )</th>
 <th scope="col" class="org-left">&#xa0;</th>
 </tr>
