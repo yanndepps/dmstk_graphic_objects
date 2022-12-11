@@ -11,6 +11,8 @@ const settings = {
   p5: true,
   dimensions: [500, 500],
   animate: true,
+  duration: 6,
+  loop: true,
   context: '2d'
 };
 

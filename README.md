@@ -63,9 +63,25 @@
 
 <tbody>
 <tr>
-<td class="org-left"><img src="./img/img_00.png" alt="img_00.png" width="240" /></td>
-<td class="org-left"><img src="./img/img_01.png" alt="img_01.png" width="240" /></td>
-<td class="org-left"><img src="./img/img_02.png" alt="img_02.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_00.png" alt="img_00.png" width="240"" /></td>
+<td class="org-left"><img src="./img/img_01.png" alt="img_01.png" width="240"" /></td>
+<td class="org-left"><img src="./img/out_01.gif" alt="out_01.gif" width="240"" /></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/img_02.png" alt="img_02.png" width="240"" /></td>
+<td class="org-left"><img src="./img/img_03.png" alt="img_03.png" width="240"" /></td>
+<td class="org-left"><img src="./img/img_04.png" alt="img_04.png" width="240"" /></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/img_05.png" alt="img_05.png" width="240"" /></td>
+<td class="org-left"><img src="./img/img_06.png" alt="img_06.png" width="240"" /></td>
+<td class="org-left"><img src="./img/out_02.gif" alt="out_02.gif" width="240"" /></td>
 </tr>
 </tbody>
 </table>

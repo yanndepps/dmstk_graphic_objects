@@ -9,7 +9,7 @@ new p5();
 
 const settings = {
   p5: true,
-  dimensions: [2048, 2048],
+  dimensions: [512, 512],
   animate: true,
   context: '2d'
 };
@@ -27,12 +27,12 @@ const settings = {
  * @param p              // an array of x (pNum) number of particles
  */
 
-const pNum = 3000;
+const pNum = 1500;
 let br;
-let ns = 0.01;
-let am = 1024;
+let ns = 0.03;
+let am = 64;
 let na = int(random(-180, 180));
-let np = 20;
+let np = 8;
 let p = Array(pNum);
 
 const sketch = ({ width, height }) => {

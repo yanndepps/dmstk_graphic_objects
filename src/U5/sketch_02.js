@@ -13,6 +13,8 @@ const settings = {
   dimensions: [512, 512],
   animate: true,
   fps: 60,
+  duration: 6,
+  loop: true,
   context: '2d'
 };
 
