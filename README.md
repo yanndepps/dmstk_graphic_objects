@@ -35,3 +35,38 @@
 -   [Discrete Flow](https://bendotk.com/#/discrete-flow/)
 -   [Generating SVGs](https://observablehq.com/@makio135/generating-svgs/20)
 
+
+## U5
+
+-   [Generative Typography Experiments](https://www.syedrezaali.com/generative-typography-experiments/)
+
+
+# Overview
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">examples screenshots</th>
+<th scope="col" class="org-left">( small selection )</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/img_00.png" alt="img_00.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_01.png" alt="img_01.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_02.png" alt="img_02.png" width="240" /></td>
+</tr>
+</tbody>
+</table>
+
