@@ -34,8 +34,8 @@ const params = {
   cs: 4,
   sw: 0.5,
   lw: 1,
-  message: 'YES&NO',
-  fs: 130,
+  message: 'No!',
+  fs: 170,
 }
 
 let font;
@@ -103,7 +103,7 @@ const createPane = () => {
   folder.addInput(params, 'lw', { min: 0.5, max: 4, step: 0.1 });
   folder = pane.addFolder({ title: 'text' });
   folder.addInput(params, 'message');
-  folder.addInput(params, 'fs', { min: 80, max: 130, step: 10 });
+  folder.addInput(params, 'fs', { min: 80, max: 500, step: 10 });
 };
 createPane();
 
