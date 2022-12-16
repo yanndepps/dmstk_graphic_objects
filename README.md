@@ -10,12 +10,12 @@
 
 # Contents
 
--   [Tools](#orgca5b8f0)
--   [Additional Resources](#orgc9e7e55)
--   [Overview](#orgdf6b243)
+-   [Tools](#org00057d3)
+-   [Additional Resources](#org236040d)
+-   [Overview](#org0378ae1)
 
 
-<a id="orgca5b8f0"></a>
+<a id="org00057d3"></a>
 
 # Tools
 
@@ -44,13 +44,20 @@
 <tbody>
 <tr>
 <td class="org-left"><b>canvas-sketch</b></td>
-<td class="org-left"><a href="https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md">Docs</a></td>
+<td class="org-left"><a href="https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md">API Docs</a></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">Tweakpane</td>
+<td class="org-left"><a href="https://cocopon.github.io/tweakpane/">API Docs</a></td>
 </tr>
 </tbody>
 </table>
 
 
-<a id="orgc9e7e55"></a>
+<a id="org236040d"></a>
 
 # Additional Resources
 
@@ -85,7 +92,7 @@
 -   [Generative Typography Experiments](https://www.syedrezaali.com/generative-typography-experiments/)
 
 
-<a id="orgdf6b243"></a>
+<a id="org0378ae1"></a>
 
 # Overview
 
