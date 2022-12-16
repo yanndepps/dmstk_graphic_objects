@@ -10,12 +10,12 @@
 
 # Contents
 
--   [Tools](#org00057d3)
--   [Additional Resources](#org236040d)
--   [Overview](#org0378ae1)
+-   [Tools](#orgb6f93ec)
+-   [Additional Resources](#org761bd94)
+-   [Overview](#orgc75da79)
 
 
-<a id="org00057d3"></a>
+<a id="orgb6f93ec"></a>
 
 # Tools
 
@@ -50,14 +50,14 @@
 
 <tbody>
 <tr>
-<td class="org-left">Tweakpane</td>
+<td class="org-left"><b>Tweakpane</b></td>
 <td class="org-left"><a href="https://cocopon.github.io/tweakpane/">API Docs</a></td>
 </tr>
 </tbody>
 </table>
 
 
-<a id="org236040d"></a>
+<a id="org761bd94"></a>
 
 # Additional Resources
 
@@ -92,7 +92,7 @@
 -   [Generative Typography Experiments](https://www.syedrezaali.com/generative-typography-experiments/)
 
 
-<a id="org0378ae1"></a>
+<a id="orgc75da79"></a>
 
 # Overview
 
