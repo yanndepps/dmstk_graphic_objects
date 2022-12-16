@@ -8,6 +8,50 @@
 -   A course by Julien Gachadoat, hosted at domestika.org
 
 
+# Contents
+
+-   [Tools](#orgca5b8f0)
+-   [Additional Resources](#orgc9e7e55)
+-   [Overview](#orgdf6b243)
+
+
+<a id="orgca5b8f0"></a>
+
+# Tools
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tool</th>
+<th scope="col" class="org-left">Documentation</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left"><b>p5.js</b></td>
+<td class="org-left"><a href="https://p5js.org/reference/">API Docs</a></td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left"><b>canvas-sketch</b></td>
+<td class="org-left"><a href="https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md">Docs</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<a id="orgc9e7e55"></a>
+
 # Additional Resources
 
 
@@ -41,6 +85,8 @@
 -   [Generative Typography Experiments](https://www.syedrezaali.com/generative-typography-experiments/)
 
 
+<a id="orgdf6b243"></a>
+
 # Overview
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
@@ -63,25 +109,25 @@
 
 <tbody>
 <tr>
-<td class="org-left"><img src="./img/img_00.png" alt="img_00.png" width="240"" /></td>
-<td class="org-left"><img src="./img/img_01.png" alt="img_01.png" width="240"" /></td>
-<td class="org-left"><img src="./img/out_01.gif" alt="out_01.gif" width="240"" /></td>
+<td class="org-left"><img src="./img/img_00.png" alt="img_00.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_01.png" alt="img_01.png" width="240" /></td>
+<td class="org-left"><img src="./img/out_01.gif" alt="out_01.gif" width="240" /></td>
 </tr>
 </tbody>
 
 <tbody>
 <tr>
-<td class="org-left"><img src="./img/img_02.png" alt="img_02.png" width="240"" /></td>
-<td class="org-left"><img src="./img/img_03.png" alt="img_03.png" width="240"" /></td>
-<td class="org-left"><img src="./img/img_04.png" alt="img_04.png" width="240"" /></td>
+<td class="org-left"><img src="./img/img_02.png" alt="img_02.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_03.png" alt="img_03.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_04.png" alt="img_04.png" width="240" /></td>
 </tr>
 </tbody>
 
 <tbody>
 <tr>
-<td class="org-left"><img src="./img/img_05.png" alt="img_05.png" width="240"" /></td>
-<td class="org-left"><img src="./img/img_06.png" alt="img_06.png" width="240"" /></td>
-<td class="org-left"><img src="./img/out_02.gif" alt="out_02.gif" width="240"" /></td>
+<td class="org-left"><img src="./img/img_05.png" alt="img_05.png" width="240" /></td>
+<td class="org-left"><img src="./img/img_06.png" alt="img_06.png" width="240" /></td>
+<td class="org-left"><img src="./img/out_02.gif" alt="out_02.gif" width="240" /></td>
 </tr>
 </tbody>
 </table>
