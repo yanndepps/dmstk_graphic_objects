@@ -9,13 +9,13 @@ const p5 = require('p5');
 new p5();
 
 const settings = {
-  p5: true,
-  dimensions: [512, 512],
-  animate: true,
-  fps: 60,
-  duration: 6,
-  loop: true,
-  context: '2d'
+	p5: true,
+	dimensions: [512, 512],
+	animate: true,
+	fps: 60,
+	duration: 6,
+	loop: true,
+	context: '2d'
 };
 
 /*
@@ -30,12 +30,12 @@ const settings = {
  */
 
 const params = {
-  factor: 0.1,
-  cs: 4,
-  sw: 0.5,
-  lw: 1,
-  message: 'No!',
-  fs: 170,
+	factor: 0.1,
+	cs: 4,
+	sw: 0.5,
+	lw: 1,
+	message: 'No!',
+	fs: 170,
 }
 
 let font;
@@ -45,65 +45,62 @@ let yTxt;
 let speed = 2;
 
 window.preload = () => {
-  font = loadFont('../../assets/font/bauhaus.otf');
+	font = loadFont('../../assets/font/bauhaus.otf');
 };
 
 const sketch = ({ width, height }) => {
-  angleMode(DEGREES);
-  xTxt = width / 2;
-  yTxt = height / 2;
-  return ({ frame }) => {
-    // computePoints(map(mouseX, 0, width, 0.005, 0.1));
-    computePoints(params.factor);
-    background(33);
-    //---
-    noFill();
-    stroke(255);
-    strokeWeight(params.lw);
-    beginShape();
-    for (let i = 0; i < points.length; i++) {
-      vertex(points[i].x, points[i].y);
-    }
-    endShape();
-    //---
-    fill(33);
-    strokeWeight(params.sw);
-    let d = 0;
-    let phase = 0;
-    for (let i = 0; i < points.length; i++) {
-      phase = dist(mouseX, mouseY, points[i].x, points[i].y);
-      d = sin(speed * frame + phase);
-      circle(points[i].x, points[i].y, d * params.cs);
-    }
-  };
+	angleMode(DEGREES);
+	xTxt = width / 2;
+	yTxt = height / 2;
+	return ({ frame }) => {
+		// computePoints(map(mouseX, 0, width, 0.005, 0.1));
+		computePoints(params.factor);
+		background(33);
+		//---
+		noFill();
+		stroke(255);
+		strokeWeight(params.lw);
+		beginShape();
+		for (let i = 0; i < points.length; i++) {
+			vertex(points[i].x, points[i].y);
+		}
+		endShape();
+		//---
+		fill(33);
+		strokeWeight(params.sw);
+		let d = 0;
+		let phase = 0;
+		for (let i = 0; i < points.length; i++) {
+			phase = dist(mouseX, mouseY, points[i].x, points[i].y);
+			d = sin(speed * frame + phase);
+			circle(points[i].x, points[i].y, d * params.cs);
+		}
+	};
 };
 
-/*
- */
-
 function computePoints(factor) {
-  points = font.textToPoints(params.message, xTxt, yTxt, params.fs, {
-    sampleFactor: factor
-  });
-  let bounds = font.textBounds(params.message, xTxt, yTxt, params.fs);
-  for (let i = 0; i < points.length; i++) {
-    let p = points[i];
-    p.x = p.x - (bounds.x - xTxt + bounds.w / 2);
-    p.y = p.y + bounds.h / 2;
-  }
+	points = font.textToPoints(params.message, xTxt, yTxt, params.fs, {
+		sampleFactor: factor
+	});
+	let bounds = font.textBounds(params.message, xTxt, yTxt, params.fs);
+	for (let i = 0; i < points.length; i++) {
+		let p = points[i];
+		p.x = p.x - (bounds.x - xTxt + bounds.w / 2);
+		p.y = p.y + bounds.h / 2;
+	}
 }
 
 const createPane = () => {
-  const pane = new Tweakpane.Pane();
-  let folder;
-  folder = pane.addFolder({ title: 'parameters' });
-  folder.addInput(params, 'factor', { min: 0.01, max: 0.2, step: 0.01 });
-  folder.addInput(params, 'cs', { min: 1, max: 32, step: 1 });
-  folder.addInput(params, 'sw', { min: 0.5, max: 4, step: 0.1 });
-  folder.addInput(params, 'lw', { min: 0.5, max: 4, step: 0.1 });
-  folder = pane.addFolder({ title: 'text' });
-  folder.addInput(params, 'message');
-  folder.addInput(params, 'fs', { min: 80, max: 500, step: 10 });
+	const pane = new Tweakpane.Pane();
+	let folder;
+	folder = pane.addFolder({ title: 'parameters' });
+	folder.addInput(params, 'factor', { min: 0.01, max: 0.2, step: 0.01 });
+	folder.addInput(params, 'cs', { min: 1, max: 32, step: 1 });
+	folder.addInput(params, 'sw', { min: 0.5, max: 4, step: 0.1 });
+	folder.addInput(params, 'lw', { min: 0.5, max: 4, step: 0.1 });
+	folder = pane.addFolder({ title: 'text' });
+	folder.addInput(params, 'message');
+	folder.addInput(params, 'fs', { min: 80, max: 500, step: 10 });
 };
 createPane();
 
